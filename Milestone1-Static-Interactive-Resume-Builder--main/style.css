@@ -7,7 +7,7 @@
   font-family: poppins;
 }
 body {
-  background-color: #ae9245;
+  background-color: #5a727e;
 }
 .wrapper {
   margin: 7vw 0;
@@ -16,11 +16,12 @@ body {
 .container {
   flex-wrap: wrap;
   background-color: black;
-  width: 70%;
+  width: 85%;
   color: white;
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  padding-left: 20px;
   padding-bottom: 40px;
   padding: 20px;
   border-radius: 8px;
@@ -128,11 +129,13 @@ body {
 .education .education_main .edu-info {
   border-left: 2px solid #6e6e6e;
   margin-top: 20px;
-  padding-left: 13px;
+  /* padding-left: 13px; */
 }
 .edu-info{
   margin-left: 10px;
+  padding-left: 20px;
 }
+
 #round {
   border: 1px solid #21359e;
   padding: 6px;
@@ -171,7 +174,7 @@ body {
   margin-top: 40px;
   padding: 5px 20px 5px 20px;
   width: 40%;
-  background-color: rgb(219, 94, 36);
+  background-color: rgba(40, 70, 240, 0.425);
   color: white;
   cursor: pointer;
   font-weight: 600;
@@ -229,6 +232,13 @@ body {
     margin: auto;
     box-shadow: 20px 40px 40px rgb(20, 18, 18);
   }
+  .box1 .sign {
+    width: 70%;
+    size: 50px;
+    margin-left: 70px;
+    padding-top: 40px;
+    font-weight: bolder;
+  }
   .box1 {
     width: 100%;
   }
@@ -253,7 +263,13 @@ body {
     width: 93%;
     box-shadow: 20px 40px 40px 3px rgb(20, 18, 18);
   }
-
+  .box2 img {
+    width: 70%;
+    height: 360px;
+    margin-left: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
   #skills-btn {
     font-size: 1rem;
     padding: 6px 25px 6px 25px;
