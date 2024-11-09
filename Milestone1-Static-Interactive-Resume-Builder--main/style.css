@@ -85,14 +85,14 @@ body {
 }
 .box1 .sign {
   width: 200px;
-  /* height: 100px; */
+  height: 100px;
   size: 70px;
   margin-left: 70px;
 
   padding-top: 30px;
   font-weight: bolder;
   /* border: 1px solid black; */
-  /* border-radius: 20%; */
+  border-radius: 20%;
 }
 
 .icons {

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Resume</h1>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Enter Your Information</h2>
+            <form id="resumeForm">
+                <!-- Profile Picture Input -->
+                <label for="profilePic">Profile Picture</label>
+                <input type="file" id="profilePic" accept="image/*">
+
+                <!-- Basic Information -->
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" placeholder="123-456-7890">
+
+                <h3>Education</h3>
+                <label for="academicEducation">1. Academic Education</label>
+                <input type="text" id="academicEducation" placeholder="e.g., Bachelor's in Computer Science">
+
+                <label for="academicYear">1. Year of Graduation</label>
+                <input type="text" id="academicYear" placeholder="e.g., 2024">
+
+                <label for="academicSchool">1. School/College/University</label>
+                <input type="text" id="academicSchool" placeholder="e.g., University of XYZ">
+
+                <label for="professionalEducation">2. Professional Education</label>
+                <textarea id="professionalEducation" placeholder="Your professional background"></textarea>
+
+                <label for="professionalYear">2. Year of Graduation</label>
+                <input type="text" id="professionalYear" placeholder="e.g., 2026">
+
+                <label for="professionalSchool">2. School/College/University</label>
+                <input type="text" id="professionalSchool" placeholder="e.g., XYZ Institute">
+
+                <h3>Experience</h3>
+                <label for="experience1">1. Relevant Experience</label>
+                <textarea id="experience1" placeholder="Describe relevant job experience"></textarea>
+
+                <label for="experienceYear1">1. Year of Experience</label>
+                <input type="text" id="experienceYear1" placeholder="e.g., 2023">
+
+                <label for="experienceCompany1">1. Company Name</label>
+                <input type="text" id="experienceCompany1" placeholder="e.g., ABC Corp">
+
+                <label for="experience2">2. Additional Experience</label>
+                <textarea id="experience2" placeholder="Describe any other experience"></textarea>
+
+                <label for="experienceYear2">2. Year of Experience</label>
+                <input type="text" id="experienceYear2" placeholder="e.g., 2022">
+
+                <label for="experienceCompany2">2. Company Name</label>
+                <input type="text" id="experienceCompany2" placeholder="e.g., XYZ Inc">
+
+                <h3>Skills</h3>
+                <label for="skill1">1. Skill #1</label>
+                <input type="text" id="skill1" placeholder="e.g., JavaScript">
+
+                <label for="skill2">2. Skill #2</label>
+                <input type="text" id="skill2" placeholder="e.g., HTML/CSS">
+
+                <label for="skill3">3. Skill #3</label>
+                <input type="text" id="skill3" placeholder="e.g., Problem Solving">
+
+                <label for="skill4">4. More Skills</label>
+                <textarea id="skill4" placeholder="List additional skills"></textarea>
+
+                <button type="button" onclick="generatePreview()">Generate Preview</button>
+            </form>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section" id="resumePreview">
+            <h2>Resume Preview</h2>
+            <div class="resume">
+                <img id="previewProfilePic" src="" alt="Profile Picture" />
+                <h2 id="previewName">Your Name</h2>
+                <p id="previewEmail">Email: your-email@example.com</p>
+                <p id="previewPhone">Phone: 123-456-7890</p>
+
+                <h3>Education</h3>
+                <p id="previewAcademicEducation">Your academic background</p>
+                <p id="previewAcademicYear">Year: Not Provided</p>
+                <p id="previewAcademicSchool">School/College/University: Not Provided</p>
+
+                <p id="previewProfessionalEducation">Your professional background</p>
+                <p id="previewProfessionalYear">Year: Not Provided</p>
+                <p id="previewProfessionalSchool">School/College/University: Not Provided</p>
+
+                <h3>Experience</h3>
+                <p id="previewExperience1">Describe relevant job experience</p>
+                <p id="previewExperienceYear1">Year: Not Provided</p>
+                <p id="previewExperienceCompany1">Company: Not Provided</p>
+
+                <p id="previewExperience2">Describe any other experience</p>
+                <p id="previewExperienceYear2">Year: Not Provided</p>
+                <p id="previewExperienceCompany2">Company: Not Provided</p>
+
+                <h3>Skills</h3>
+                <p id="previewSkills">Your skills</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button onclick="downloadPDF()">Download as PDF</button>
+                <button onclick="editResume()">Edit</button>
+                <button onclick="shareResume()">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

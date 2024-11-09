@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #FFD700; /* Golden color */
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+/* Form Section */
+.form-section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #1E90FF; /* Blue color */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4682B4;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Preview Section */
+.preview-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.resume {
+    text-align: center;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+#previewProfilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.resume h2 {
+    color: #FFD700;
+}
+
+.resume p {
+    color: #fff;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    width: 150px;
+    padding: 12px;
+}
+
+/* Responsive Design for Profile Picture */
+@media screen and (max-width: 768px) {
+    #previewProfilePic {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Adjust form and buttons */
+    .form-section, .preview-section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+    }
+}
+
+/* Additional Responsive Styles */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .resume h2 {
+        font-size: 1.5rem;
+    }
+
+    .resume p {
+        font-size: 0.9rem;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button:hover {
+    animation: bounce 0.5s ease-in-out;
+}
